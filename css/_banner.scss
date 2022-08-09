@@ -1,0 +1,151 @@
+/*Banner --------------------------------------*/
+@keyframes colorCycle {
+    0%  {
+        filter: brightness(0) invert(1);
+    }
+    50% {
+        filter: none;
+    }
+}
+
+@mixin banner-config {
+    background: linear-gradient(90deg, #64FA9B, #5FE36A);
+    filter: brightness(0) invert(1);
+    background-clip: text; //Faz com que o background vá para a letra
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+
+    .img-banner img {
+        justify-content: flex-end;
+        width: 40%;
+        max-width: 300px;
+        border: 5px solid #4ca2cd;
+        border-radius: 50%;
+        
+        -webkit-transition: all 1s;
+        transition: all 1s;
+
+        &:hover {
+            width: 200px;
+            border: 5px solid $text-secondary-two;
+        }
+    }
+
+    .text-banner {
+        width: 100%;
+
+        h1 {
+            @include banner-config();
+
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+            
+            animation: colorCycle 8s ease-in-out infinite;
+            //-webkit-transition: all 1s;
+            //transition: all 1s;
+
+            &:hover {
+                //font-size: 2.5rem;
+            }
+
+            span {
+                color: $text-secondary-two;
+                font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+            }
+        }
+
+        h3 {
+            @include banner-config();
+            
+
+            font-size: 1.2rem;
+            color: $text-primary;
+            text-transform: uppercase;
+            font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+            margin-bottom: 50px;
+
+            animation: colorCycle 8s ease-in-out infinite;
+            animation-delay: 3.33s;
+
+            &:hover {
+                //font-size: 2rem;
+            }
+        }
+
+        a {
+            
+            padding: 13px 20px;
+            color: $text-primary !important;
+            background: linear-gradient(90deg, #00F260, #0575E6) !important;
+
+            font-size: 20px;
+            //background: linear-gradient(225deg, $text-secondary 0%, $text-secondary-two 100%);
+            border-radius: 10px;
+        
+            //animation: colorCycle 10s ease-in-out infinite;
+            //animation-delay: 6.66s;
+            //-webkit-transition: all 1s;
+            //transition: all 1s;
+
+            &:hover {
+                //padding: 15px 22px;
+                color: $bg;
+            }
+        }
+
+        i {
+            margin-left: 5px;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    /*Banner --------------------------*/
+    .banner {
+        max-width: 900px;
+        flex-direction: row;
+
+        .img-banner {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10px;
+
+            img {
+                width: 60%;
+
+                &:hover {
+                    width: 80%;
+                }
+            }
+        }
+
+        .text-banner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

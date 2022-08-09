@@ -1,0 +1,219 @@
+/*Skills --------------------------------------*/
+#skills {
+    border-top: 1px solid $bg-transparent;
+
+    margin-top: 20px;
+    width: 100%;
+    background-color: #24252F;
+
+    .skills-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .skills-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+            color: #FFF;
+
+            h1 {
+                @include titles-sections();
+                //color: #5FE36A;
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                margin: 20px;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            hr {
+                width: 200px;
+                border: 1px solid #5FE36A;
+            }
+        }
+
+        .skills-tecnologies {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        
+            width: 100%;
+        
+            margin: 10px;
+
+            .tec {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            
+                width: 95%;
+                height: 100%;
+
+                .tec-text {
+                    background: linear-gradient(90deg, #00F260, #0575E6);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    
+                    //color: #FFF;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                
+                    width: 100%;
+
+                    h1 {
+                        font-size: 1.5rem;
+                        margin: 20px;
+                        font-weight: 300;
+
+                        i {
+                            margin-left: 20px;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    hr {
+                        width: 100px;
+                        border: 1px solid #5FE36A;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .tec-icons {
+                    height: 100px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    flex-grow: 1;
+                    color: #FFF;
+
+                    .icons {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 10px;
+                        width: 20%;
+                        height: 100%;
+                        
+                        i {
+                            font-size: 3rem;
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                        
+                            -webkit-transition: all 1s;
+                            transition: all 1s;
+    
+                            &:hover {
+                                font-size: 5rem;
+                                color: #BD5D38;
+                                -webkit-transition: all 1s;
+                                transition: all 1s;
+                            }
+                        }
+
+                        p {
+                            font-size: .9rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/*Alterando as cores dos icones de skills*/
+#css:hover {
+    color: rgb(79, 156, 230) !important;
+}
+
+#js:hover {
+    color: rgb(238, 211, 28) !important;
+}
+
+#bootstrap:hover {
+    color: rgb(98, 59, 151) !important;
+}
+
+#sass:hover {
+    color: #c9598f !important;
+}
+
+#react:hover {
+    color: rgb(86, 213, 250) !important;
+}
+
+#php:hover {
+    color: rgb(108, 112, 170) !important;
+}
+
+#laravel:hover {
+    color: rgb(237, 51, 40) !important;
+}
+
+#node:hover {
+    color: rgb(86, 170, 63) !important;
+}
+
+#rn:hover {
+    color: rgb(0, 211, 253) !important;
+}
+
+#android:hover {
+    color: rgb(41, 218, 122) !important;
+}
+
+@media (min-width: 700px) {
+    .skills-content .skills-tecnologies .tec {
+        align-items: center;
+        justify-content: center;
+
+        max-width: 1100px;
+        width: 95%;
+        height: 350px;
+
+        .tec-text h1 {
+            font-size: 2rem;
+
+            i {
+                font-size: 1.8rem;
+            }
+        }
+
+        .tec-text hr {
+            width: 120px;
+        }
+
+        .tec-icons {
+            height: 100px;
+            width: 65%;
+
+            i {
+                font-size: 6rem !important;
+                
+                &:hover {
+                    font-size: 7rem !important;
+                }
+            }
+        }
+    }
+}

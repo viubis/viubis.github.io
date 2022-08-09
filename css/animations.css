@@ -1,0 +1,65 @@
+/*Animations*/
+
+@keyframes right-left {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-right-left{
+    animation: right-left 0.7s backwards;
+    -moz-animation: right-left 0.7s backwards;
+    -webkit-animation: right-left 0.7s backwards;
+}
+
+/*Animações do menu*/
+.menu-delay1 {
+    animation-delay: 0.5s;
+}
+.menu-delay2 {
+    animation-delay: 0.6s;
+}
+.menu-delay3 {
+    animation-delay: .7s;
+}
+.menu-delay4 {
+    animation-delay: .8s;
+}
+
+/*Animações do Banner*/
+.animate-up {
+    -moz-animation: up 1s backwards;
+    -webkit-animation: up 1s backwards;
+    animation: up 1s backwards;
+
+    /*animation-name: up;
+    animation-duration: 1s;
+    /*Assim que concluir a animação, ele irá parar permanecendo na ultima propriedade aplicada*/
+    /*animation-fill-mode: backwards;*/
+}
+
+/*About*/
+/*.about-text {
+    animation-delay: 0.5s;
+}
+
+.about-subtext {
+    animation-delay: 0.6s;
+}*/

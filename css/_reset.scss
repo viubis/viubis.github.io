@@ -1,0 +1,56 @@
+/*Resert --------------------------------------*/
+$bg: #24252F;
+$bg-transparent: rgba(123, 131, 139, 0.5);
+$text-primary: #FFF;
+$text-secondary: #64FA9B;
+$text-secondary-two: #5FE36A;
+
+@mixin titles-sections {
+    //background: linear-gradient(90deg, #00F260, #0575E6);
+    background: linear-gradient(90deg, $text-secondary, $text-secondary-two);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $bg;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input, button {
+    font-family: 'Lato', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .container {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+}

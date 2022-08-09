@@ -1,0 +1,21 @@
+/*Footer --------------------------------------*/
+footer {
+    background: rgb(53, 53, 53);
+    border-top: 2px solid $bg-transparent;
+    width: 100%;
+}
+
+.footer-content {
+    color: $text-primary;
+    text-align: center;
+    padding: 20px 0;
+
+    p {
+        font-size: 0.9rem;
+
+        i {
+            font-size: 25px;
+            color: $text-secondary-two;
+        }
+    }
+}

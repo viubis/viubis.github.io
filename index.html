@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Viubis.dev - Full stack Web developer">
+    <link rel="icon" href="img/icon_64.png">
+    <title>Viubis dev.</title>
+
+    <!-- Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8af63c8e61.js" crossorigin="anonymous"></script>
+    <!-- Font Lato & Saira Extra Condensed -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="" id="top">
+
+        <header id="home">
+            <div class="container" id="menu">
+                <div class="logo">
+                    <a href="#top">
+                        <img src="img/logo.png" alt="">
+                        <h1>&lt;Víctor /&gt;</h1>
+                    </a>
+
+                    <div class="button-menu">
+                        <i class="fa fa-bars" onclick="showMenu()"></i>
+                    </div>
+                </div>
+    
+                <nav>
+                    <ul>
+                        <li class="animate-right-left"><a href="#home" onclick="showMenu()" >Home</a></li>
+                        <li class="animate-right-left menu-delay1"><a href="#about" onclick="showMenu()" >Sobre</a></li>
+                        <li class="animate-right-left menu-delay2"><a href="#portfolio" onclick="showMenu()" >Portfólio</a></li>
+                        <li class="animate-right-left menu-delay3"><a href="#skills" onclick="showMenu()" >Skills</a></li>
+                        <li class="animate-right-left menu-delay4"><a href="#contato" onclick="showMenu()" >Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <section class="banner container">
+            <div class="img-banner">
+                <img src="img/profile.jpeg" alt="">
+            </div>
+
+            <div class="text-banner">
+                <h1 class="banner-title">Víctor <span>Souza</span></h1>
+                <h3 class="banner-text">Full stack Developer</h3>
+                <a class="banner-link" href="#about">Saiba mais <i class="fas fa-angle-double-down"></i></a>
+            </div>
+        </section>
+    
+        <section id="about">
+            <div class="content-about container">
+                <h1 class="">Sobre mim</h1>
+                <hr>
+                <h3 class="about-text">Me chamo Víctor Souza,
+                    sou estudante de Engenharia de Computação 
+                    na Universidade Estadual de Feira de Santana - UEFS (Bahia).
+                </h3>
+                <p class="about-subtext">
+                    Desde a infância sempre gostei de tecnologia e vídeo games, com a conclusão do ensino médio, decidi seguir
+                    o caminho da programação. Vejo a programação como uma ferramenta que nos 
+                    possibilita desenvolver novas experiências, alcançar objetivos sociais e pessoais, 
+                    uma oportunidade de melhorar a vida das pessoas, assim como a minha também.
+                </p>
+            </div>
+        </section>
+        
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-text">
+                <h1>Portfólio</h1>
+                <p>Alguns dos projetos desenvolvidos</p>
+                <hr>
+            </div>
+    
+    
+            <article class="projetos">
+
+                <div class="projeto">
+                    <a onclick="openModal('modal-parallax')">
+                        <img src="img/parallax.png" alt="">
+                        <div class="text-projeto">
+                            <h1>Parallax Template</h1>
+                            <p>Este site no momento é um template de uma landpage 
+                                no estilo parallax, onde há uma transição nas formas 
+                                com a qual o background de cada seção muda. Visualizar 
+                                no computador para uma melhor experiência.
+                            </p>
+                        </div>
+                    </a>    
+                </div>
+                
+                <div class="modal" id="modal-parallax">
+                    <div class="box">
+                        <div class="box-content">
+                            <img src="img/parallax-2.png" alt="">
+                            <h1>Parallax Template</h1>
+                            <p>
+                                Este projeto se trata de um template de uma landpage no 
+                                estilo parallax. Esse estilo faz com as imagens de background 
+                                em cada seção do site seja alterada gradativamente de acordo 
+                                com o rolar do scroll, utilizando uma seção com cor fixa para 
+                                destacar o efeito.
+                            </p>
+                            <div class="modal-buttons">
+                                <a href="https://viubis.github.io/parisweb/" target="_blank">Visite o site</a>
+                                <a class="git" href="https://github.com/viubis/parisweb" target="_blank">Repositório do Projeto</a>
+                            </div>
+                        </div>
+                        <a class="close" id="close" onclick="closeModal('modal-parallax')" >
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="projeto">
+                    <a onclick="openModal('modal-ecommerce')">
+                        <img src="img/ecommerce.png" alt="">
+                        <div class="text-projeto">
+                            <h1>E-commerce Template</h1>
+                            <p>Este é um template de site de E-commerce para pequenas lojas virtuais.
+                            </p>
+                        </div>
+                    </a>    
+                </div>
+                
+                <div class="modal" id="modal-ecommerce">
+                    <div class="box">
+                        <div class="box-content">
+                            <img src="img/ecommerce2.png" alt="">
+                            <h1>E-commerce Shop Template</h1>
+                            <p>
+                                Este projeto se trata de um template de um e-commerce. 
+                                Possui apenas o desenvolvimento do Front-end, utilizando HTML e CSS.
+                            </p>
+                            <div class="modal-buttons">
+                                <a href="https://dukmarques.github.io/Ecommerce-Shop-Template/index.html" target="_blank">Visite o site</a>
+                                <a class="git" href="https://github.com/dukmarques/Ecommerce-Shop-Template" target="_blank">Repositório do Projeto</a>
+                            </div>
+                        </div>
+                        <a class="close" id="close" onclick="closeModal('modal-ecommerce')" >
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+    
+        <section id="skills">
+            <div class="skills-content">
+                
+                <div class="skills-intro">
+                    <h1>Minhas Habilidades</h1>
+                    <p>
+                        Tecnologias que utilizo nos desenvolvimentos dos meus projetos.
+                    </p>
+                    <hr>
+                </div>
+    
+                <div class="skills-tecnologies">
+                    
+                    <div class="tec">
+                        <div class="tec-text">
+                            <h1>Front-end <i class="fas fa-desktop"></i></h1>
+                            <hr>
+                        </div>
+    
+                        <div class="tec-icons">
+                            <div class="icons">
+                                <i class="fab fa-html5" id="html"></i>
+                                <p>HTML</p>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-css3-alt" id="css"></i>
+                                <p>CSS</p>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-sass" id="sass"></i>
+                                <p>Sass</p>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-js-square" id="js"></i>
+                                <p>Javascript</p>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-bootstrap" id="bootstrap"></i>
+                                <p>Bootstrap</p>
+                            </div>           
+                        </div>
+                    </div>
+    
+                    <div class="tec">
+                        <div class="tec-text">
+                            <h1>Back-end <i class="fas fa-sitemap"></i></h1>
+                            <hr>
+                        </div>
+    
+                        <div class="tec-icons">
+                            <div class="icons">
+                                <i class="fab fa-php" id="php"></i>
+                                <p>PHP</p>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-java" id="java"></i>
+                                <p>Java</p>
+                            </div>
+                            <div class="icons">
+                                <i class="fab fa-node" id="node"></i>
+                                <p>Node.js</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+    
+        <section class="container" id="contato">
+            <div class="contato-content">
+                <div class="contato-intro">
+                    <h1>Contato</h1>
+                    <!-- <h3>Entre em contato para jobs ou me ofereça um estágio!</h3> -->
+                </div>
+    
+                <div class="contato-sociais">
+                    <ul>
+                        <li>
+                            <a target="blank" id="whatsapp" href="https://api.whatsapp.com/send?phone=5575991623379">
+                                <i class="fab fa-whatsapp"></i>
+                                <p>(75) 991623379</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a target="blank" href="https://github.com/viubis" id="git">
+                                <i class="fab fa-github"></i>
+                                <p>/viubis</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a id="email">
+                                <i class="fas fa-envelope-square"></i>
+                                <p>victor.s.santos2@gmail.com</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Copyright &copy; Todos direitos reservados. Viubis -  2022
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

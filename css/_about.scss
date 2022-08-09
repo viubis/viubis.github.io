@@ -1,0 +1,64 @@
+/*About --------------------------------------*/
+section#about {
+    border-top: 1px solid $bg-transparent;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: #24252F;
+
+    .content-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        color: $text-primary;
+        font-family: 'Saira Extra Condensed',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+        padding: 20px;
+
+        h1 {
+            @include titles-sections();
+        
+            //color: $text-secondary;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: $text-primary;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        hr {
+            width: 200px;
+            border: 1px solid #00F260;
+            margin-bottom: 15px;
+        
+            background: linear-gradient(90deg, #00F260, #0575E6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    #about {
+        height: 400px;
+    }
+
+    .content-about {
+        max-width: 60%;
+    }
+}

@@ -1,0 +1,240 @@
+/*Portfolio --------------------------------------*/
+.portfolio {
+    border-top: 1px solid $bg-transparent;
+    //background-color: #FFF;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .portfolio-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            @include titles-sections();
+            //color: #5FE36A;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            color: $text-primary;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            width: 200px;
+            border: 1px solid #5FE36A;
+            margin-bottom: 10px;
+        }
+    }
+
+    .projetos {
+        width: 100%;
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .projeto {
+            margin: 0px 20px;
+            height: 70vh;
+            width: 100%;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            -webkit-transition: all 1s;
+            transition: all 1s;
+
+            a {
+                width: 90%;
+                height: 90%;
+                background: linear-gradient(90deg, #00F260, #0575E6);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                border-radius: 10px;
+            
+                -webkit-transition: all 1s;
+                transition: all 1s;
+
+                img{
+                    width: 100%;
+                    height: 65%;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0 0;
+                }
+
+                .text-projeto {
+                    color: #FFF;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+                    h1 {
+                        font-size: 1.4rem;
+                        margin: 10px;
+                        font-weight: 100;
+                    }
+
+                    p {
+                        font-size: 0.9rem;
+                        margin: 10px 5px 20px 5px;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Modal portfólio*/
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 90%;
+    height: 80%;
+    margin: 15px;
+
+    position: absolute;
+    animation: boxAnimation .5s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFF;
+    border-radius: 10px;
+
+    .box-content {
+        width: 100%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            margin-top: 30px;
+            padding: 0 10px;
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+            border-radius: 2.5%;
+        }
+
+        h1 {
+            color: #24252F;
+            font-size: 2rem;
+            margin: 10px;
+        }
+
+        p {
+            color: #24252F;
+            font-size: 1.2rem;
+            margin: 0 5px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+
+            a {
+                color: #FFF;
+                font-size: 1.2rem;
+                background: #5FE36A;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 3px;
+            }
+
+            .git {
+                background: #24252F;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .close {
+        color: #5FE36A;
+        font-size: 2.3rem;
+        position: absolute;
+        top: 3px;
+        right: 10px;
+    }
+}
+
+@media (min-width: 700px) {
+    /*Portfolio ------------------------*/
+    .portfolio .projetos .projeto {
+        margin: 0px 10px;
+        height: 60vh;
+        width: 40%; /*400px*/
+        max-width: 400px;
+
+        a:hover {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /*Modal portfólio*/
+    .box {
+        width: 90%;
+        max-width: 850px;
+
+        .box-content img {
+            max-width: 800px;
+            height: 80%;
+
+            p {
+                width: 80%;
+                max-width: 750px;
+                margin: 0 50px;
+            }
+        }
+    }
+}
+
+@keyframes boxAnimation {
+    from {
+        top: -500px;
+        opacity: 0;
+    }
+
+    to {
+        top: 70px;
+        opacity: 1;
+    }
+}
